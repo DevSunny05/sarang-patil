@@ -1,9 +1,10 @@
 import React from 'react'
-import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg'
-import installNode from '../assets/portfolio/installNode.jpg'
-import reactParallax from '../assets/portfolio/reactParallax.jpg'
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
-import reactWeather from '../assets/portfolio/reactWeather.jpg'
+import cyberpunk from '../assets/portfolio/cyberpunk.jpg'
+import weatherapp from '../assets/portfolio/weatherapp.jpg'
+import expenceTracker from '../assets/portfolio/expenceTracker.jpg'
+import pos from '../assets/portfolio/pos.jpg'
+import doctorAppointment from '../assets/portfolio/doctorAppointment.jpg'
+import portfolio from '../assets/portfolio/portfolio.jpg'
 
 
 const Portfolio = () => {
@@ -11,28 +12,45 @@ const Portfolio = () => {
     const portfolios=[
         {
         id:1,
-        src:arrayDestruct
+        src:expenceTracker,
+        codeLink:'https://github.com/DevSunny05/expence-management-system',
+        siteLink:'https://amaranth-basket-clam-tie.cyclic.app/'
     },
     {
         id:2,
-        src:installNode
+        src:pos,
+        codeLink:'https://github.com/DevSunny05/Point-of-System',
+        siteLink:'https://courageous-handkerchief-lion.cyclic.app/'
     },
     {
         id:3,
-        src:reactParallax
+        src:doctorAppointment,
+        codeLink:'https://github.com/DevSunny05/doctors-appointment-app',
+        siteLink:'https://jade-aggressive-oyster.cyclic.app/'
     },
     {
         id:4,
-        src:reactSmooth
+        src:portfolio,
+        codeLink:'https://github.com/DevSunny05/sarang-patil',
+        siteLink:'https://github.com/DevSunny05/sarang-patil'
     },
     {
         id:5,
-        src:reactWeather
-    }
+        src:weatherapp,
+        codeLink:'https://github.com/DevSunny05/weather-app-react',
+        siteLink:'https://whatsupweather.netlify.app/'
+    },
+    {
+        id:6,
+        src:cyberpunk,
+        codeLink:'https://github.com/DevSunny05/cyberpunk-react-web',
+        siteLink:'https://cyberpunk-web.netlify.app/'
+    },
+    
 
 ]
   return (
-    <div name='portfolio' className='w-full bg-gradient-to-b from-black to-gray-800 text-white md:h-screen'>
+    <div name='portfolio' className='w-full h-fit bg-gradient-to-b from-black to-gray-800 text-white '>
       <div className=' max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
             <p className='text-4xl font-bold inline border-b-4 border-b-gray-500'>Portfolio</p>
@@ -43,12 +61,14 @@ const Portfolio = () => {
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
         {
-            portfolios.map(({id,src})=>(
+            portfolios.map(({id,src,codeLink,siteLink})=>(
                 <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                <img src={src} alt=""  className='rounded-md duration-200 hover:scale-105 object-cover'/>
+                <img src={src} alt=""  className='rounded-md duration-200 hover:scale-105 object-full w-full h-48'/>
                 <div className='flex items-center justify-center'>
-                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+                    
+                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a href={codeLink}>Code</a></button>
+                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a href={siteLink}>Demo</a></button>
+                  
                 </div>
             </div>
             ))
