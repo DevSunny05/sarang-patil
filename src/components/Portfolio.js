@@ -32,7 +32,7 @@ const Portfolio = () => {
         id:4,
         src:portfolio,
         codeLink:'https://github.com/DevSunny05/sarang-patil',
-        siteLink:'https://github.com/DevSunny05/sarang-patil'
+        siteLink:'https://sarang-patil.netlify.app/'
     },
     {
         id:5,
